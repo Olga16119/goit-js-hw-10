@@ -17,7 +17,7 @@ function onSelectChange() {
     loadingElements(true);
     clearInfoByCat();
 
-    fetchCatByBreed(selectedOption)
+     fetchCatByBreed(selectedOption)
       .then(data => {
         const dataCat = data[0];
         const breed = dataCat.breeds[0];
@@ -56,7 +56,7 @@ function onSelectChange() {
 
   // функція, яка рендерить розмітку для інформаціі про кота
   function renderInfoByCat(dataByCat) {
-    infoByCat.innerHTML = `<img src="${dataByCat.image}" alt="${dataByCat.name}"/><h2><span>Name:</span>${dataByCat.name}</h2><p><span>Description:</span>${dataByCat.description}</p><p><span>Temperament:</span>${dataByCat.temperament}</p>`;
+    infoByCat.innerHTML = `<img src="${dataByCat.image}" alt="${dataByCat.name}" width="540"/><h2><span>Name:</span>${dataByCat.name}</h2><p><span>Description:</span>${dataByCat.description}</p><p><span>Temperament:</span>${dataByCat.temperament}</p>`;
   }
   loadingElements(true)
 
